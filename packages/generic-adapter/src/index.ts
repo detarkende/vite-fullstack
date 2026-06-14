@@ -43,9 +43,7 @@ export interface CreateViteMiddlewareHandlers<T> {
  * }
  * ```
  */
-export function createViteMiddleware<T>(
-  handlers: CreateViteMiddlewareHandlers<T>,
-): T {
+export function createViteMiddleware<T>(handlers: CreateViteMiddlewareHandlers<T>): T {
   if (process.env.__VFSPA_ASSETS_DIR__ === undefined) {
     let serverPromise: Promise<ViteDevServer> | null = null;
 
@@ -63,10 +61,7 @@ export function createViteMiddleware<T>(
 
     return handlers.dev(getViteServer);
   } else {
-    const assetsDir = path.join(
-      import.meta.dirname,
-      process.env.__VFSPA_ASSETS_DIR__,
-    );
+    const assetsDir = path.join(import.meta.dirname, process.env.__VFSPA_ASSETS_DIR__);
 
     return handlers.prod(assetsDir);
   }

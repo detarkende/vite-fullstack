@@ -1,5 +1,17 @@
 {
   "type": "module",
-  "scripts": {},
-  "packageManager": "pnpm@11.6.0"
+  "scripts": {
+    "build": "pnpm -r build",
+    "lint": "oxlint packages examples",
+    "lint:fix": "oxlint packages examples --fix",
+    "fmt:fix": "oxfmt packages examples README.md",
+    "fmt:check": "oxfmt packages examples README.md --check",
+    "typecheck": "pnpm -r exec tsc --noEmit",
+    "check": "pnpm lint && pnpm fmt:check && pnpm typecheck"
+  },
+  "packageManager": "pnpm@11.6.0",
+  "devDependencies": {
+    "oxfmt": "^0.54.0",
+    "oxlint": "^1.69.0"
+  }
 }

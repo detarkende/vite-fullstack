@@ -9,11 +9,7 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: [
-        ...builtinModules.flatMap((m) => [m, `node:${m}`]),
-        "vite",
-        "express",
-      ],
+      external: [...builtinModules.flatMap((m) => [m, `node:${m}`]), "vite", "express"],
     },
   },
 });

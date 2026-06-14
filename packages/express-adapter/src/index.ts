@@ -16,15 +16,12 @@ export interface ViteMiddlewareOptions {
  * app.use(viteMiddleware())
  * ```
  */
-export function viteMiddleware(
-  options: ViteMiddlewareOptions = {},
-): RequestHandler {
+export function viteMiddleware(options: ViteMiddlewareOptions = {}): RequestHandler {
   return createViteMiddleware({
     dev: (getViteServer) => async (req, res, next) => {
       const vite = await getViteServer();
       vite.middlewares(req, res, next);
     },
-    prod: (assetsDir) =>
-      express.static(assetsDir, options.expressStaticOptions),
+    prod: (assetsDir) => express.static(assetsDir, options.expressStaticOptions),
   });
 }

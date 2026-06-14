@@ -1,12 +1,17 @@
 {
   "name": "examples-express",
+  "type": "module",
   "scripts": {
     "dev": "vite-node server/index.ts",
     "build": "vite build",
     "preview": "node dist/server.js"
   },
-  "type": "module",
-  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@vfspa/express-adapter": "workspace:*",
+    "express": "^5.2.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^24.13.1",
@@ -20,10 +25,5 @@
     "vite": "^8.0.16",
     "vite-node": "^6.0.0"
   },
-  "dependencies": {
-    "@vfspa/express-adapter": "workspace:*",
-    "express": "^5.2.1",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
-  }
+  "packageManager": "pnpm@10.10.0"
 }

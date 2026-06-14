@@ -1,19 +1,19 @@
 {
   "name": "@vfspa/express-adapter",
-  "type": "module",
   "keywords": [
-    "vfspa",
-    "express"
+    "express",
+    "vfspa"
   ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },

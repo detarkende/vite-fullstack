@@ -1,19 +1,19 @@
 {
   "name": "@vfspa/generic-adapter",
   "version": "0.1.0",
-  "type": "module",
   "keywords": [
     "vfspa"
   ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
