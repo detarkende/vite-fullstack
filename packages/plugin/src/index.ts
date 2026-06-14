@@ -68,7 +68,7 @@ export default function fullstackPlugin(
             // __VITE_FULLSTACK_DEV__ is frozen to false at build time so
             // bundlers dead-code-eliminate the dev branch without touching NODE_ENV.
             define: {
-              "process.env.__VITE_FULLSTACK_ASSETS_DIR__": JSON.stringify(
+              "process.env.__VFSPA_ASSETS_DIR__": JSON.stringify(
                 path.relative(serverOutDir, clientOutDir),
               ),
             },
