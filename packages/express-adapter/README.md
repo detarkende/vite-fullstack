@@ -1,13 +1,13 @@
-# @vfspa/express-adapter
+# @vite-fullstack-spa/express-adapter
 
-Express middleware adapter for VFSPA (Vite Fullstack SPA).
+Express middleware adapter for vite-fullstack-spa.
 
 ## Usage
 
 ```ts
-import { viteMiddleware } from "@vfspa/express-adapter";
+import { viteMiddleware } from "@vite-fullstack-spa/express-adapter";
 
 app.use(viteMiddleware());
 ```
 
-In VFSPA, you can pass `expressStaticOptions` to tune `express.static` in production.
+In vite-fullstack-spa, you can pass `expressStaticOptions` to tune `express.static` in production.

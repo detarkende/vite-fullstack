@@ -1,8 +1,8 @@
 {
-  "name": "@vfspa/plugin",
+  "name": "@vite-fullstack-spa/plugin",
   "version": "0.1.0",
   "keywords": [
-    "vfspa",
+    "vite-fullstack-spa",
     "vite-plugin"
   ],
   "files": [

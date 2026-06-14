@@ -1,11 +1,11 @@
-# @vfspa/generic-adapter
+# @vite-fullstack-spa/generic-adapter
 
-VFSPA (Vite Fullstack SPA) core helper for building framework adapters.
+vite-fullstack-spa core helper for building framework adapters.
 
 ## Usage
 
 ```ts
-import { createViteMiddleware } from "@vfspa/generic-adapter";
+import { createViteMiddleware } from "@vite-fullstack-spa/generic-adapter";
 
 export function viteMiddleware() {
   return createViteMiddleware({
@@ -18,4 +18,4 @@ export function viteMiddleware() {
 }
 ```
 
-In VFSPA, the `dev` and `prod` callbacks decide the return type, so inference usually works without casts.
+In vite-fullstack-spa, the `dev` and `prod` callbacks decide the return type, so inference usually works without casts.

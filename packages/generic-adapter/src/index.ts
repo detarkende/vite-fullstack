@@ -3,7 +3,7 @@ import path from "node:path";
 
 declare global {
   interface ProcessEnv {
-    __VFSPA_ASSETS_DIR__?: string;
+    __VITE_FULLSTACK_SPA_ASSETS_DIR__?: string;
   }
 }
 
@@ -30,7 +30,7 @@ export interface CreateViteMiddlewareHandlers<T> {
  * @example
  * ```ts
  * // Custom adapter
- * import { createViteMiddleware } from "@vfspa/generic-adapter";
+ * import { createViteMiddleware } from "@vite-fullstack-spa/generic-adapter";
  *
  * export function myMiddleware() {
  *   return createViteMiddleware({
@@ -44,7 +44,7 @@ export interface CreateViteMiddlewareHandlers<T> {
  * ```
  */
 export function createViteMiddleware<T>(handlers: CreateViteMiddlewareHandlers<T>): T {
-  if (process.env.__VFSPA_ASSETS_DIR__ === undefined) {
+  if (process.env.__VITE_FULLSTACK_SPA_ASSETS_DIR__ === undefined) {
     let serverPromise: Promise<ViteDevServer> | null = null;
 
     const getViteServer = (): Promise<ViteDevServer> => {
@@ -61,7 +61,7 @@ export function createViteMiddleware<T>(handlers: CreateViteMiddlewareHandlers<T
 
     return handlers.dev(getViteServer);
   } else {
-    const assetsDir = path.join(import.meta.dirname, process.env.__VFSPA_ASSETS_DIR__);
+    const assetsDir = path.join(import.meta.dirname, process.env.__VITE_FULLSTACK_SPA_ASSETS_DIR__);
 
     return handlers.prod(assetsDir);
   }

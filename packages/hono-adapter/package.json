@@ -1,8 +1,8 @@
 {
-  "name": "@vfspa/hono-adapter",
+  "name": "@vite-fullstack-spa/hono-adapter",
   "keywords": [
     "hono",
-    "vfspa"
+    "vite-fullstack-spa"
   ],
   "files": [
     "dist"
@@ -18,7 +18,7 @@
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
   "dependencies": {
-    "@vfspa/generic-adapter": "workspace:*"
+    "@vite-fullstack-spa/generic-adapter": "workspace:*"
   },
   "devDependencies": {
     "@hono/node-server": "^2.0.4",

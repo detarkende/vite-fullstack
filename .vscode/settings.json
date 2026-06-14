@@ -1,5 +1,5 @@
 {
   "yaml.schemas": {
-    "https://www.schemastore.org/pnpm-workspace.json": "file:///Users/dkende/Documents/experiments/vfspa/pnpm-workspace.yaml"
+    "https://www.schemastore.org/schemas/json/pnpm-workspace.json": "pnpm-workspace.yaml"
   }
 }

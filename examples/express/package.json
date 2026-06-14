@@ -7,7 +7,7 @@
     "preview": "node dist/server.js"
   },
   "dependencies": {
-    "@vfspa/express-adapter": "workspace:*",
+    "@vite-fullstack-spa/express-adapter": "workspace:*",
     "express": "^5.2.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
@@ -17,8 +17,8 @@
     "@types/node": "^24.13.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vfspa/express-adapter": "workspace:*",
-    "@vfspa/plugin": "workspace:*",
+    "@vite-fullstack-spa/express-adapter": "workspace:*",
+    "@vite-fullstack-spa/plugin": "workspace:*",
     "@vitejs/plugin-react": "^6.0.2",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",

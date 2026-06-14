@@ -1,13 +1,13 @@
-# @vfspa/hono-adapter
+# @vite-fullstack-spa/hono-adapter
 
-Hono middleware adapter for VFSPA (Vite Fullstack SPA).
+Hono middleware adapter for vite-fullstack-spa.
 
 ## Usage
 
 ```ts
-import { viteMiddleware } from "@vfspa/hono-adapter";
+import { viteMiddleware } from "@vite-fullstack-spa/hono-adapter";
 
 app.use(viteMiddleware());
 ```
 
-In VFSPA, dev mode proxies through Vite and production serves built client assets automatically.
+In vite-fullstack-spa, dev mode proxies through Vite and production serves built client assets automatically.

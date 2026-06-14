@@ -1,8 +1,8 @@
 {
-  "name": "@vfspa/express-adapter",
+  "name": "@vite-fullstack-spa/express-adapter",
   "keywords": [
     "express",
-    "vfspa"
+    "vite-fullstack-spa"
   ],
   "files": [
     "dist"
@@ -18,7 +18,7 @@
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
   "dependencies": {
-    "@vfspa/generic-adapter": "workspace:*"
+    "@vite-fullstack-spa/generic-adapter": "workspace:*"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

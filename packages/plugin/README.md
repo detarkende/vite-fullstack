@@ -1,14 +1,14 @@
-# @vfspa/plugin
+# @vite-fullstack-spa/plugin
 
-Core Vite plugin for VFSPA (Vite Fullstack SPA).
+Core Vite plugin for vite-fullstack-spa.
 
-It configures a coordinated client + server build and injects the assets path that VFSPA adapters use in production.
+It configures a coordinated client + server build and injects the assets path that vite-fullstack-spa adapters use in production.
 
 ## Usage
 
 ```ts
 import { defineConfig } from "vite";
-import fullstackPlugin from "@vfspa/plugin";
+import fullstackPlugin from "@vite-fullstack-spa/plugin";
 
 export default defineConfig({
   plugins: [fullstackPlugin()],

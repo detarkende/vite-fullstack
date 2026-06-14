@@ -17,7 +17,7 @@ importers:
 
   examples/express:
     dependencies:
-      '@vfspa/express-adapter':
+      '@vite-fullstack-spa/express-adapter':
         specifier: workspace:*
         version: link:../../packages/express-adapter
       express:
@@ -42,7 +42,7 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
-      '@vfspa/plugin':
+      '@vite-fullstack-spa/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
       '@vitejs/plugin-react':
@@ -66,7 +66,7 @@ importers:
       '@hono/node-server':
         specifier: ^2.0.4
         version: 2.0.4(hono@4.12.25)
-      '@vfspa/hono-adapter':
+      '@vite-fullstack-spa/hono-adapter':
         specifier: workspace:*
         version: link:../../packages/hono-adapter
       hono:
@@ -88,7 +88,7 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
-      '@vfspa/plugin':
+      '@vite-fullstack-spa/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
       '@vitejs/plugin-react':
@@ -106,7 +106,7 @@ importers:
 
   packages/express-adapter:
     dependencies:
-      '@vfspa/generic-adapter':
+      '@vite-fullstack-spa/generic-adapter':
         specifier: workspace:*
         version: link:../generic-adapter
     devDependencies:
@@ -140,7 +140,7 @@ importers:
 
   packages/hono-adapter:
     dependencies:
-      '@vfspa/generic-adapter':
+      '@vite-fullstack-spa/generic-adapter':
         specifier: workspace:*
         version: link:../generic-adapter
     devDependencies:
