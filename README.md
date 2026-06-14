@@ -1,23 +1,66 @@
-# vite-fullstack-spa
+# Vite Fullstack SPA
 
-vite-fullstack-spa is a way to build full-stack single-page apps with Vite, where:
+- **Single build command** — Vite builds the whole app in one go
+- **Single output directory** — the fullstack app is emitted to `dist/`
+- **Any server framework** — use whatever you like
+  - [Express](packages/express-adapter)
+  - [Hono](packages/hono-adapter)
+  - [Generic adapter](packages/generic-adapter)
+  - Fastify *(Coming soon…)*
+  - Koa *(Coming soon…)*
 
-- the client is built by Vite
-- the server is built by Vite
-- framework adapters (for example Hono or Express) hide the dev/prod middleware setup
+## Example project structure
 
-If you want to use vite-fullstack-spa in your app, start with the plugin and then pick an adapter.
+```txt
+.
+├── client/
+│   ├── index.html
+│   └── main.tsx
+├── server/
+│   └── index.ts
+└── dist/
+    ├── server.js (preconfigured to serve the frontend artifacts)
+    └── public/ (frontend bundle)
+```
 
-## Package Docs
+## Example Projects
 
-- [@vite-fullstack-spa/plugin](packages/plugin/README.md)
-- [@vite-fullstack-spa/generic-adapter](packages/generic-adapter/README.md)
-- [@vite-fullstack-spa/hono-adapter](packages/hono-adapter/README.md)
-- [@vite-fullstack-spa/express-adapter](packages/express-adapter/README.md)
+- [Hono example](examples/hono)
+- [Express example](examples/express)
 
-## Quick Start
+## Example usage
 
-1. Add the vite-fullstack-spa plugin in your Vite config.
-2. Attach an adapter middleware to your server app.
+**vite.config.ts**
 
-See the package docs above for framework-specific examples.
+```typescript
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import fullstack from "@vite-fullstack-spa/plugin";
+
+export default defineConfig({
+  plugins: [fullstack(), react()],
+});
+```
+
+**server/index.ts**
+
+```typescript
+import { Hono } from "hono";
+import { serve, HttpBindings } from "@hono/node-server";
+import { viteMiddleware } from "@vite-fullstack-spa/hono-adapter";
+
+const app = new Hono<{ Bindings: HttpBindings }>();
+
+app.get("/api/data", (c) => {
+  return c.json({ message: "Hello from the API!" });
+});
+
+app.use(viteMiddleware());
+
+serve({
+  fetch: app.fetch,
+  port: 3000,
+});
+
+console.log("Server is running on http://localhost:3000");
+```
