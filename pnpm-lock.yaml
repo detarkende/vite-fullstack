@@ -98,6 +98,10 @@ importers:
         version: 8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4)
 
   packages/express-adapter:
+    dependencies:
+      '@vfspa/generic-adapter':
+        specifier: workspace:*
+        version: link:../generic-adapter
     devDependencies:
       '@types/express':
         specifier: ^5.0.6
@@ -115,7 +119,23 @@ importers:
         specifier: ^8.0.16
         version: 8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4)
 
+  packages/generic-adapter:
+    devDependencies:
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.13.2
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.0.16
+        version: 8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4)
+
   packages/hono-adapter:
+    dependencies:
+      '@vfspa/generic-adapter':
+        specifier: workspace:*
+        version: link:../generic-adapter
     devDependencies:
       '@hono/node-server':
         specifier: ^2.0.4

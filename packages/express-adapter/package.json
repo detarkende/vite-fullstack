@@ -17,6 +17,9 @@
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
+  "dependencies": {
+    "@vfspa/generic-adapter": "workspace:*"
+  },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^24.0.0",
