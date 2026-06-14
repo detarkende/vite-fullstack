@@ -1,8 +1,8 @@
 {
-  "name": "@vfspa/generic-adapter",
+  "name": "@vite-fullstack-spa/generic-adapter",
   "version": "0.1.0",
   "keywords": [
-    "vfspa"
+    "vite-fullstack-spa"
   ],
   "files": [
     "dist"

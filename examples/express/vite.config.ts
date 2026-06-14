@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import fullstack from "@vfspa/plugin";
+import fullstack from "@vite-fullstack-spa/plugin";
 
 export default defineConfig({
   plugins: [fullstack(), react()],
