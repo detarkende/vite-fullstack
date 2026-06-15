@@ -6,8 +6,8 @@
   - [Express](packages/express-adapter)
   - [Hono](packages/hono-adapter)
   - [Generic adapter](packages/generic-adapter)
-  - Fastify *(Coming soon…)*
-  - Koa *(Coming soon…)*
+  - Fastify _(Coming soon…)_
+  - Koa _(Coming soon…)_
 
 ## Example project structure
 
