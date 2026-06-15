@@ -48,9 +48,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.2
         version: 6.0.2(vite@8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4))
-      tsx:
-        specifier: ^4.22.4
-        version: 4.22.4
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -94,15 +91,15 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.2
         version: 6.0.2(vite@8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4))
-      tsx:
-        specifier: ^4.22.4
-        version: 4.22.4
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
       vite:
         specifier: ^8.0.16
         version: 8.0.16(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4)
+      vite-node:
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@24.13.2)(esbuild@0.28.1)(tsx@4.22.4)
 
   packages/express-adapter:
     dependencies:
@@ -1695,6 +1692,7 @@ snapshots:
       '@esbuild/win32-arm64': 0.28.1
       '@esbuild/win32-ia32': 0.28.1
       '@esbuild/win32-x64': 0.28.1
+    optional: true
 
   escape-html@1.0.3: {}
 
@@ -2080,6 +2078,7 @@ snapshots:
       esbuild: 0.28.1
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   type-is@2.1.0:
     dependencies:

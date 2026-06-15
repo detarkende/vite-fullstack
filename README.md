@@ -12,15 +12,16 @@
 ## Example project structure
 
 ```txt
-.
-├── client/
-│   ├── index.html
-│   └── main.tsx
-├── server/
-│   └── index.ts
+/
+├── src/
+│   ├── client/
+│   │   ├── index.html
+│   │   └── main.tsx
+│   └── server/
+│       └── index.ts
 └── dist/
     ├── server.js (preconfigured to serve the frontend artifacts)
-    └── public/ (frontend bundle)
+    └── public/ (frontend bundle + static files)
 ```
 
 ## Example Projects

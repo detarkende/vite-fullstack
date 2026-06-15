@@ -4,7 +4,7 @@ import { viteMiddleware } from "@vite-fullstack-spa/express-adapter";
 const app = express();
 
 app.get("/api/data", (_req, res) => {
-  res.json({ message: "Hello from the API!" });
+  res.json({ message: "Hello from the server!" });
 });
 
 app.use(viteMiddleware());

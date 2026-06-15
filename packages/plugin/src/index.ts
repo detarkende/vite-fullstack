@@ -7,12 +7,12 @@ export interface FullstackPluginOptions {
    * Path to the server entry file, relative to project root.
    * @default './server/index.ts'
    */
-  server?: string;
+  serverEntry?: string;
   /**
    * Path to the client directory (where index.html lives), relative to project root.
    * @default './client'
    */
-  client?: string;
+  clientDir?: string;
   /**
    * Output directory for the built server bundle, relative to project root.
    * @default 'dist'
@@ -26,23 +26,27 @@ export interface FullstackPluginOptions {
 }
 
 const defaultOptions: Required<FullstackPluginOptions> = {
-  server: "./server/index.ts",
-  client: "./client",
+  serverEntry: "./src/server/index.ts",
+  clientDir: "./src/client",
   serverOutDir: "dist",
   clientOutDir: "dist/public",
 };
 
-export default function fullstackPlugin(userOptions: FullstackPluginOptions = {}): Plugin {
+export default function fullstackPlugin(
+  userOptions: FullstackPluginOptions = {},
+): Plugin {
   const opts = { ...defaultOptions, ...userOptions };
 
   return {
     name: "vite-fullstack-spa",
 
     config(config) {
-      const projectRoot = config.root ? path.resolve(config.root) : process.cwd();
+      const projectRoot = config.root
+        ? path.resolve(config.root)
+        : process.cwd();
 
-      const clientDir = path.resolve(projectRoot, opts.client);
-      const serverEntry = path.resolve(projectRoot, opts.server);
+      const clientDir = path.resolve(projectRoot, opts.clientDir);
+      const serverEntry = path.resolve(projectRoot, opts.serverEntry);
       const serverOutDir = path.resolve(projectRoot, opts.serverOutDir);
       const clientOutDir = path.resolve(projectRoot, opts.clientOutDir);
 
@@ -74,7 +78,10 @@ export default function fullstackPlugin(userOptions: FullstackPluginOptions = {}
               emptyOutDir: false,
               rollupOptions: {
                 input: { server: serverEntry },
-                external: [...builtinModules.flatMap((m) => [m, `node:${m}`]), "vite"],
+                external: [
+                  ...builtinModules.flatMap((m) => [m, `node:${m}`]),
+                  "vite",
+                ],
                 output: { format: "esm", entryFileNames: "[name].js" },
               },
             },
