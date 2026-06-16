@@ -1,6 +1,6 @@
 import type { RequestHandler } from "express";
 import express from "express";
-import { createViteMiddleware } from "@vite-fullstack-spa/generic-adapter";
+import { createViteMiddleware } from "@vite-fullstack/generic-adapter";
 
 export interface ViteMiddlewareOptions {
   expressStaticOptions?: Parameters<typeof express.static>[1];

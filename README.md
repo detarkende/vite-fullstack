@@ -31,7 +31,7 @@
 ```typescript
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import fullstack from "@vite-fullstack-spa/plugin";
+import fullstack from "@vite-fullstack/plugin";
 
 export default defineConfig({
   plugins: [fullstack(), react()],
@@ -43,7 +43,7 @@ export default defineConfig({
 ```typescript
 import { Hono } from "hono";
 import { serve, HttpBindings } from "@hono/node-server";
-import { viteMiddleware } from "@vite-fullstack-spa/hono-adapter";
+import { viteMiddleware } from "@vite-fullstack/hono-adapter";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 

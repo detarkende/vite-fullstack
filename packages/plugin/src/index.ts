@@ -38,7 +38,7 @@ export default function fullstackPlugin(
   const opts = { ...defaultOptions, ...userOptions };
 
   return {
-    name: "vite-fullstack-spa",
+    name: "vite-fullstack",
 
     config(config) {
       const projectRoot = config.root
@@ -68,7 +68,7 @@ export default function fullstackPlugin(
             // __VITE_FULLSTACK_DEV__ is frozen to false at build time so
             // bundlers dead-code-eliminate the dev branch without touching NODE_ENV.
             define: {
-              "process.env.__VITE_FULLSTACK_SPA_ASSETS_DIR__": JSON.stringify(
+              "process.env.__VITE_FULLSTACK_ASSETS_DIR__": JSON.stringify(
                 path.relative(serverOutDir, clientOutDir),
               ),
             },
