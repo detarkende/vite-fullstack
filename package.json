@@ -6,7 +6,7 @@
     "lint:fix": "oxlint packages examples --fix",
     "fmt:fix": "oxfmt packages examples README.md",
     "fmt:check": "oxfmt packages examples README.md --check",
-    "typecheck": "pnpm -r exec tsc --noEmit",
+    "typecheck": "pnpm -r exec tsc --noEmit --customConditions sourcecode",
     "check": "pnpm lint && pnpm fmt:check && pnpm typecheck",
     "release": "pnpm run build && pnpm changeset publish",
     "prepare": "husky"
