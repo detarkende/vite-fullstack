@@ -5,6 +5,7 @@
     "vite-fullstack",
     "vite-plugin"
   ],
+  "license": "MIT",
   "files": [
     "dist"
   ],
