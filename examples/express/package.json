@@ -1,5 +1,6 @@
 {
   "name": "examples-express",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite-node --watch src/server/index.ts",

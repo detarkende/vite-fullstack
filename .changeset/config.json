@@ -1,0 +1,12 @@
+{
+  "$schema": "../node_modules/@changesets/config/schema.json",
+  "baseBranch": "main",
+  "access": "public",
+  "ignore": ["examples-express", "examples-hono"],
+  "fixed": [],
+  "linked": [],
+  "format": "oxfmt",
+  "updateInternalDependencies": "patch",
+  "commit": false,
+  "changelog": "@changesets/cli/changelog"
+}
