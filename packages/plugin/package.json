@@ -1,0 +1,30 @@
+{
+  "name": "@vite-fullstack/plugin",
+  "version": "0.1.0",
+  "keywords": [
+    "vite-fullstack",
+    "vite-plugin"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "sourcecode": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  },
+  "peerDependencies": {
+    "vite": "^8.0.0"
+  }
+}

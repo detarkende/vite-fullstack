@@ -1,0 +1,37 @@
+{
+  "name": "@vite-fullstack/hono",
+  "version": "0.1.0",
+  "keywords": [
+    "hono",
+    "vite-fullstack"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "sourcecode": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
+  },
+  "dependencies": {
+    "@vite-fullstack/generic": "workspace:*"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^2.0.4",
+    "@types/node": "^24.0.0",
+    "hono": "^4.12.25",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  },
+  "peerDependencies": {
+    "@hono/node-server": "^2.0.0",
+    "hono": "^4.0.0",
+    "vite": "^8.0.0"
+  }
+}

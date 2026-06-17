@@ -1,0 +1,36 @@
+{
+  "name": "@vite-fullstack/express",
+  "version": "0.1.0",
+  "keywords": [
+    "express",
+    "vite-fullstack"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "sourcecode": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
+  },
+  "dependencies": {
+    "@vite-fullstack/generic": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.0.0",
+    "express": "^5.2.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  },
+  "peerDependencies": {
+    "express": "^5.0.0",
+    "vite": "^8.0.0"
+  }
+}

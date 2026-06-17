@@ -1,0 +1,29 @@
+{
+  "name": "examples-express",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite-node --watch src/server/index.ts",
+    "build": "vite build",
+    "preview": "node dist/server.js"
+  },
+  "dependencies": {
+    "@vite-fullstack/express": "workspace:*",
+    "express": "^5.2.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vite-fullstack/express": "workspace:*",
+    "@vite-fullstack/plugin": "workspace:*",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vite-node": "^6.0.0"
+  },
+  "packageManager": "pnpm@10.10.0"
+}
