@@ -4,6 +4,7 @@
   "keywords": [
     "vite-fullstack"
   ],
+  "license": "MIT",
   "files": [
     "dist"
   ],
