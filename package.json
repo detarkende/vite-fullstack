@@ -7,7 +7,8 @@
     "fmt:fix": "oxfmt packages examples README.md",
     "fmt:check": "oxfmt packages examples README.md --check",
     "typecheck": "pnpm -r exec tsc --noEmit",
-    "check": "pnpm lint && pnpm fmt:check && pnpm typecheck"
+    "check": "pnpm lint && pnpm fmt:check && pnpm typecheck",
+    "release": "pnpm run build && pnpm changeset publish"
   },
   "packageManager": "pnpm@11.6.0",
   "devDependencies": {
