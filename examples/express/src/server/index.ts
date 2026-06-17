@@ -1,5 +1,5 @@
 import express from "express";
-import { viteMiddleware } from "@vite-fullstack/express-adapter";
+import { viteMiddleware } from "@vite-fullstack/express";
 
 const app = express();
 

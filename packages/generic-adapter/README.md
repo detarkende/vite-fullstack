@@ -1,11 +1,11 @@
-# @vite-fullstack/generic-adapter
+# @vite-fullstack/generic
 
 vite-fullstack core helper for building framework adapters.
 
 ## Usage
 
 ```ts
-import { createViteMiddleware } from "@vite-fullstack/generic-adapter";
+import { createViteMiddleware } from "@vite-fullstack/generic";
 
 export function viteMiddleware() {
   return createViteMiddleware({

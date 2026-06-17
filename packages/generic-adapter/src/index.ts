@@ -30,7 +30,7 @@ export interface CreateViteMiddlewareHandlers<T> {
  * @example
  * ```ts
  * // Custom adapter
- * import { createViteMiddleware } from "@vite-fullstack/generic-adapter";
+ * import { createViteMiddleware } from "@vite-fullstack/generic";
  *
  * export function myMiddleware() {
  *   return createViteMiddleware({

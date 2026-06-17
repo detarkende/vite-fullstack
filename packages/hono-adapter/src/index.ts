@@ -1,7 +1,7 @@
 import { serveStatic } from "@hono/node-server/serve-static";
 import type { HttpBindings } from "@hono/node-server";
 import type { MiddlewareHandler } from "hono";
-import { createViteMiddleware } from "@vite-fullstack/generic-adapter";
+import { createViteMiddleware } from "@vite-fullstack/generic";
 
 export interface ViteMiddlewareOptions {}
 

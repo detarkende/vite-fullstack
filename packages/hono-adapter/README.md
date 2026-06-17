@@ -1,11 +1,11 @@
-# @vite-fullstack/hono-adapter
+# @vite-fullstack/hono
 
 Hono middleware adapter for vite-fullstack.
 
 ## Usage
 
 ```ts
-import { viteMiddleware } from "@vite-fullstack/hono-adapter";
+import { viteMiddleware } from "@vite-fullstack/hono";
 
 app.use(viteMiddleware());
 ```

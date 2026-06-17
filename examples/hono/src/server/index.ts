@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { serve, HttpBindings } from "@hono/node-server";
-import { viteMiddleware } from "@vite-fullstack/hono-adapter";
+import { viteMiddleware } from "@vite-fullstack/hono";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 

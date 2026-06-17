@@ -3,9 +3,9 @@
 - **Single build command** — Vite builds the whole app in one go
 - **Single output directory** — the fullstack app is emitted to `dist/`
 - **Any server framework** — use whatever you like
-  - [Express](packages/express-adapter)
-  - [Hono](packages/hono-adapter)
-  - [Generic adapter](packages/generic-adapter)
+  - [Express](packages/express)
+  - [Hono](packages/hono)
+  - [Generic adapter](packages/generic)
   - Fastify _(Coming soon…)_
   - Koa _(Coming soon…)_
 
@@ -43,7 +43,7 @@ export default defineConfig({
 ```typescript
 import { Hono } from "hono";
 import { serve, HttpBindings } from "@hono/node-server";
-import { viteMiddleware } from "@vite-fullstack/hono-adapter";
+import { viteMiddleware } from "@vite-fullstack/hono";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 

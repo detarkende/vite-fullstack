@@ -1,5 +1,5 @@
 {
-  "name": "@vite-fullstack/express-adapter",
+  "name": "@vite-fullstack/express",
   "version": "0.0.1",
   "keywords": [
     "express",
@@ -19,7 +19,7 @@
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
   "dependencies": {
-    "@vite-fullstack/generic-adapter": "workspace:*"
+    "@vite-fullstack/generic": "workspace:*"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

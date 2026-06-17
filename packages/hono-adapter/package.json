@@ -1,6 +1,6 @@
 {
+  "name": "@vite-fullstack/hono",
   "version": "0.0.1",
-  "name": "@vite-fullstack/hono-adapter",
   "keywords": [
     "hono",
     "vite-fullstack"
@@ -19,7 +19,7 @@
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
   },
   "dependencies": {
-    "@vite-fullstack/generic-adapter": "workspace:*"
+    "@vite-fullstack/generic": "workspace:*"
   },
   "devDependencies": {
     "@hono/node-server": "^2.0.4",

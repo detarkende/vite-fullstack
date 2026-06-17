@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@hono/node-server": "^2.0.4",
-    "@vite-fullstack/hono-adapter": "workspace:*",
+    "@vite-fullstack/hono": "workspace:*",
     "hono": "^4.12.25",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
@@ -18,7 +18,7 @@
     "@types/node": "^24.13.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vite-fullstack/hono-adapter": "workspace:*",
+    "@vite-fullstack/hono": "workspace:*",
     "@vite-fullstack/plugin": "workspace:*",
     "@vitejs/plugin-react": "^6.0.2",
     "typescript": "^6.0.3",

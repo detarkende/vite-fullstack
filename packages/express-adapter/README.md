@@ -1,11 +1,11 @@
-# @vite-fullstack/express-adapter
+# @vite-fullstack/express
 
 Express middleware adapter for vite-fullstack.
 
 ## Usage
 
 ```ts
-import { viteMiddleware } from "@vite-fullstack/express-adapter";
+import { viteMiddleware } from "@vite-fullstack/express";
 
 app.use(viteMiddleware());
 ```

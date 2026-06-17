@@ -32,18 +32,14 @@ const defaultOptions: Required<FullstackPluginOptions> = {
   clientOutDir: "dist/public",
 };
 
-export default function fullstackPlugin(
-  userOptions: FullstackPluginOptions = {},
-): Plugin {
+export default function fullstackPlugin(userOptions: FullstackPluginOptions = {}): Plugin {
   const opts = { ...defaultOptions, ...userOptions };
 
   return {
     name: "vite-fullstack",
 
     config(config) {
-      const projectRoot = config.root
-        ? path.resolve(config.root)
-        : process.cwd();
+      const projectRoot = config.root ? path.resolve(config.root) : process.cwd();
 
       const clientDir = path.resolve(projectRoot, opts.clientDir);
       const serverEntry = path.resolve(projectRoot, opts.serverEntry);
@@ -78,10 +74,7 @@ export default function fullstackPlugin(
               emptyOutDir: false,
               rollupOptions: {
                 input: { server: serverEntry },
-                external: [
-                  ...builtinModules.flatMap((m) => [m, `node:${m}`]),
-                  "vite",
-                ],
+                external: [...builtinModules.flatMap((m) => [m, `node:${m}`]), "vite"],
                 output: { format: "esm", entryFileNames: "[name].js" },
               },
             },
