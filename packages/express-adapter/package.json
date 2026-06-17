@@ -1,11 +1,15 @@
 {
   "name": "@vite-fullstack/express",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "express",
     "vite-fullstack"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/detarkende/vite-fullstack"
+  },
   "files": [
     "dist"
   ],
